@@ -26,3 +26,15 @@ Run `php artisan migrate` to install the database schema.
 ### Running the code quality tools:
 * Run `./vendor/bin/phpcs` to validate the codebase meets the PSR-2 standard
 * Run `./vendor/bin/phpstan analyse` to perform static analysis against the codebase
+
+### Files of interest
+The following files contain the bulk of the functionality:
+* `app/Http/Controllers/ContactController.php` // Main contact API controller
+* `app/Http/Requests/...` // HTTP Requests
+* `app/Http/Resources/ContactResource.php` // Resource for transform
+* `app/Models/...` // Models
+* `app/Policies/ContactPolicy.php` // Policy
+* `database/factories/...` // Factories to generate test data
+* `database/migrations/2021_09_26_091415_create_contacts_table.php` // Migration (other migrations are as standard)
+* `routes/api.php` // Route for API resource
+* `tests/Feature/Contacts/...` // Tests (most interesting folder)
